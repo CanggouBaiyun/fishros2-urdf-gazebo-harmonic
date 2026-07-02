@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find fishbot_description)/urdf/fishbot/common_inertia.xacro"/>
+    <xacro:macro name="camera_xacro" params="xyz">
+        <link name="camera_link">
+            <!--部件的外观-->
+            <visual>
+                <!--沿着自己几何中心的偏移和旋转量-->
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>  
+                <!--几何形状-->  
+                <geometry>
+                    <!--正方体-->
+                    <box size="0.02 0.10 0.02"/>
+                </geometry>
+                <!--材质颜色-->
+                <material name="black">
+                    <color rgba="0.0 0.0 0.0 0.5"/>
+                </material>
+            </visual>
+            <collision>
+                <!--沿着自己几何中心的偏移和旋转量-->
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>  
+                <!--几何形状-->  
+                <geometry>
+                    <!--正方体-->
+                    <box size="0.02 0.10 0.02"/>
+                </geometry>
+                <!--材质颜色-->
+                <material name="black">
+                    <color rgba="0.0 0.0 0.0 0.5"/>
+                </material>
+            </collision>
+            <xacro:box_inertia m="0.1" w="0.02" h="0.10" d="0.02"/>
+        </link>
+        <!--机器人的关节，用于组合机器人的部件-->
+        <joint name="camera_joint" type="fixed">
+            <origin xyz="${xyz}" rpy="0.0 0.0 0.0"/>
+            <parent link="base_link"/>
+            <child link="camera_link"/>
+        </joint>
+
+        <!-- ROS 相机光学坐标系：Z 轴朝前、X 轴朝右、Y 轴朝下。 -->
+        <link name="camera_optical_link"/>
+        <joint name="camera_optical_joint" type="fixed">
+            <origin xyz="0 0 0" rpy="-1.57079632679 0 -1.57079632679"/>
+            <parent link="camera_link"/>
+            <child link="camera_optical_link"/>
+        </joint>
+    </xacro:macro>
+    
+
+</robot>
