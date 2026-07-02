@@ -1,5 +1,12 @@
 # FishROS2 URDF 学习代码（Gazebo Harmonic 适配版）
 
+# FishROS2 URDF 学习代码（Gazebo Harmonic 适配版）
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-E95420?logo=ubuntu&logoColor=white)](https://ubuntu.com/)
+[![ROS 2](https://img.shields.io/badge/ROS%202-Jazzy-22314E?logo=ros&logoColor=white)](https://docs.ros.org/en/jazzy/)
+[![Gazebo](https://img.shields.io/badge/Gazebo-Harmonic-F58113)](https://gazebosim.org/docs/harmonic/)
+
 ## 1. 项目介绍
 
 本仓库是学习 FishROS ROS 2 课程第六章 URDF、Xacro、RViz 和 Gazebo
