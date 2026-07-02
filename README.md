@@ -1,6 +1,5 @@
 # FishROS2 URDF 学习代码（Gazebo Harmonic 适配版）
 
-# FishROS2 URDF 学习代码（Gazebo Harmonic 适配版）
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-E95420?logo=ubuntu&logoColor=white)](https://ubuntu.com/)
